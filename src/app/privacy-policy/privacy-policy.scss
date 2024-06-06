@@ -1,0 +1,34 @@
+@import "../../components/styles/mixins.scss";
+@import "../../components/styles/variables.scss";
+@import "../../components/styles/commonStyles.scss";
+
+.privacy {
+  @include flexColumn(32px);
+  width: 100%;
+  max-width: 1184px;
+  padding: 24px 16px;
+  margin-inline: auto;
+  border: 1px solid red;
+
+  .privacy__content {
+    @include flexColumn(16px);
+  }
+
+  .privacy__intro {
+    @include flexColumn(8px);
+    border: 1px solid green;
+  }
+
+  .privacy__list-container {
+    border: 1px solid blue;
+  }
+
+  .privacy__list {
+    @include flexColumn(16px);
+    @include list-style(decimal, inside);
+  }
+
+  .privacy__item-content {
+    margin-top: 8px;
+  }
+}

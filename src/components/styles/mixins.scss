@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+// Media Screen
+
+// max-width: 320 px
+@mixin media-mobile {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+// max-width: 576 px
+@mixin media-smartphone {
+  @media screen and (max-width: $breakpoint-smartphone) {
+    @content;
+  }
+}
+
+// max-width: 768 px
+@mixin media-tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// max-width: 1024 px
+@mixin media-laptop {
+  @media screen and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+// max-width: 1440 px
+@mixin media-large-laptop {
+  @media screen and (max-width: $breakpoint-large-laptop) {
+    @content;
+  }
+}
+
+// max-width: 1920 px
+@mixin media-desktop {
+  @media screen and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+// min-width: 1920 px
+@mixin media-large-desktop {
+  @media screen and (min-width: $breakpoint-large-desktop) {
+    @content;
+  }
+}
+
+// Common Mixins
+
+@mixin flexColumn($gapNum) {
+  display: flex;
+  flex-direction: column;
+  gap: $gapNum;
+}
+
+@mixin list-style($type, $position) {
+  list-style-type: $type;
+  list-style-position: $position;
+}
+
+// @mixin text($color: #000000, $size: 16px, $weight: 400, $line: auto, $padding: 0, $text-align: unset) {
+//   color: $color;
+//   font-size: $size;
+//   font-weight: $weight;
+//   line-height: $line;
+//   padding: $padding;
+//   text-align: $text-align;
+// }
+
+@mixin flex($direction: row, $justify: space-between, $align: center, $gap: 0, $wrap: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+  flex-wrap: $wrap;
+}

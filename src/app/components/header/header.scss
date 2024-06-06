@@ -1,0 +1,30 @@
+
+@import "../../../components/styles/mixins.scss";
+@import "../../../components/styles/variables.scss";
+
+
+.header-btn {
+  width: 153px;
+  height: 48px;
+  background-color: #004AAD;
+  color: #FFFFFF;
+  border-radius: 8px;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header__middle {
+  @include flex($gap: 25px, $justify: center);
+  color: $defaultGray;
+}
+
+.active {
+  color: $lightGray;
+}
+
+

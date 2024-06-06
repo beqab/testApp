@@ -1,0 +1,51 @@
+@import "../../components/styles/mixins.scss";
+@import "../../components/styles/variables.scss";
+@import "../../components/styles/commonStyles.scss";
+
+.terms {
+  @include flexColumn(32px);
+  width: 100%;
+  max-width: 1184px;
+  padding: 24px 16px;
+  margin-inline: auto;
+  border: 1px solid red;
+
+  .terms__content {
+    @include flexColumn(16px);
+  }
+
+  .terms__intro {
+    @include flexColumn(8px);
+    border: 1px solid green;
+  }
+
+  .terms__list-container {
+    border: 1px solid blue;
+  }
+
+  .terms__list {
+    @include flexColumn(16px);
+    @include list-style(decimal, inside);
+  }
+
+  .terms__item-content {
+    display: inline;
+  }
+
+  .terms__item-14 .terms__item-content p {
+    margin-bottom: 10px;
+  }
+
+  .terms__item-unorderedList {
+    @include flexColumn(10px);
+  }
+}
+
+// max-width: 576 px
+@include media-smartphone {
+  .terms {
+    .terms__content {
+      @include flexColumn(32px);
+    }
+  }
+}
